@@ -1,0 +1,174 @@
+
+<div class="content">
+    
+    <div class="wrapper">
+    <div class="admin-wrapper">
+        <div id="admin-content">
+            <div id="wrap">
+                <form action="" method="post">
+                  <div class="col-md-8 pdl">
+                    <div class="entry-content">
+                      <div class="entry-title">
+                      <h1>Edit Services</h1>
+                      <div class="item" ng-repeat="gallery in gallery_list">
+                                            <a class="link" ng-click="getGallery(gallery.id)">{{ gallery.name }}</a>
+                        </div> 
+                        <input type="text" class="form-control" id="page-title" placeholder="Enter services name" type="text" ng-model="current_service.service_name"> 
+                      </div><!--entry title-->
+                      <div>
+                      <h1>Edit Price</h1> 
+                      <input type="text" class="form-control" placeholder="Enter price" type="text" ng-model="current_service.prices"> 
+                      </div><!--entry title-->
+
+                      <div class="content-editor">
+                          <!-- <div class="editor-controls">
+                             <a href="">Upload / Insert</a>
+                          </div>
+                          <div class="editor-toolbar">
+                            <div class="editor-body">
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <button role="presentation" type="button" tabindex="-1">
+                                  <i class="fa fa-bold"></i></button>
+                              </div> 
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <button role="presentation" type="button" tabindex="-1">
+                                  <i class="fa fa-italic"></i></button>
+                              </div> 
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <button role="presentation" type="button" tabindex="-1">
+                                  <i class="fa fa-underline"></i></button>
+                              </div> 
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <button role="presentation" type="button" tabindex="-1">
+                                  <i class="fa fa-align-left"></i></button>
+                              </div>
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <button role="presentation" type="button" tabindex="-1">
+                                  <i class="fa fa-align-center"></i></button>
+                              </div> 
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <button role="presentation" type="button" tabindex="-1">
+                                  <i class="fa fa-align-right"></i></button>
+                              </div>
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <select id="font-family">
+                                   <option>Font</option>
+                                   <option>Times New Roman</option>
+                                   <option>Helvetica</option>
+                                   <option>Open Sans</option>
+                                   <option>Sans serif</option>
+                                   <option>Arial</option>
+                                   <option>Nueue</option>
+                                </select>
+                              </div>
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <button role="presentation" type="button" tabindex="-1">
+                                  <span class="text-strike">ABC</span></button>
+                              </div>
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <button role="presentation" type="button" tabindex="-1">
+                                  <i class="fa fa-mail-forward"></i></button>
+                              </div>
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <button role="presentation" type="button" tabindex="-1">
+                                  <i class="fa fa-mail-reply"></i></button>
+                              </div>
+                            </div>
+                          </div><!--editor toolbar-->
+                          <textarea class="form-control" rows="15" ng-model="current_service.service_content"></textarea>
+                      </div><!--content editor-->
+                    </div><!--entry content-->
+                  </div><!--col 8-->
+
+
+                  <div class="col-md-4">
+                    <aside class="entry-right">
+                        <div id="postbox-container1" class="post-box">  
+                          <div class="entry-content">
+                          <h3>Published Services</h3>
+                            <div class="list_wrapper">
+                                <div class="list" ng-repeat="service in service_list">
+                                    <div class="item">
+                                        <a class="link" ng-click="getService(service.id)">{{ service.service_name}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Edit Services</h3>
+                            <div class="collapse in" id="page-collapse">
+                                <div>
+                                  <a href=""  class="current" ng-click="saveService()">Save</a>
+                                </div>
+                                <div>
+                                  <a href="" ng-click="clearService()">Clear</a></li>
+                                </div>
+                            </div>
+
+                              <!-- <a href="" class="btn btn-default pull-right">Preview changes</a>
+                              <div class="clearfix"></div>
+                               <div class="pub-section">
+                                  <label>Status:</label>
+                                  <span class="post-status">
+                                    Published 
+                                  </span>
+                                  <a href="">Edit</a>
+                               </div> -->
+                               <!-- <div class="pub-section">
+                                  <label>Visiblity:</label>
+                                  <span class="post-status">
+                                    Public 
+                                  </span>
+                                  <a href="">Edit</a>
+                               </div>  -->
+                          </div>
+
+                              <!-- <div class="publish-action">
+                                <a href="" class="submitdelete">Move to trash</a>
+                                <input type="submit" name="publish" id="publish" class="btn btn-info btn-small pull-right" value="Publish">
+                              </div> -->
+                        </div>
+
+                       <!--  <div class="post-box">
+                          <h3>Attribute</h3>
+                          <div class="entry-content">
+                             <p><strong>Parent</strong></p>
+                             <select>
+                               <option>No Parent</option>
+                               <option>Parent one</option>
+                               <option>Parent two</option>
+                             </select>
+                              <p><strong>Template</strong></p>
+                               <select>
+                                 <option>Homepage template</option>
+                                 <option>Template one</option>
+                                 <option>Template two</option>
+                               </select>
+                              <p><strong>Order</strong></p>
+                               <select>
+                                 <option>Alphabetically</option>
+                               </select>
+                               <p></p>
+                          </div>
+                        </div>  -->   
+                    </aside><!--entry right-->
+                  </div>
+                </form>
+            </div>
+        </div><!--admin content-->
+      </div>  <!--admin wrapper-->
+        <!-- <div>
+            <label>Headline</label>
+            <input e>
+        </div>
+        <div>
+            <label>Page Label</label>
+            <input type="text" ng-model="current_page.page_label">
+        </div>
+        <div>
+            <label>Body</label>
+            <textarea ng-model="current_page.body"></textarea>
+        </div>
+        <div>
+            <button ng-click="clearPage()">New</button>
+            <button ng-click="savePage()">Save</button>
+        </div>
+ -->

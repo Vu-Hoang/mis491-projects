@@ -1,0 +1,126 @@
+
+<div class="content">
+    
+    <div class="wrapper">
+    <div class="admin-wrapper">
+        <div id="admin-content">
+            <div id="wrap">
+                <h1>Edit Page</h1> 
+                <form action="" method="post">
+                  <div class="col-md-9 pdl">
+                    <div class="entry-content">
+                      <div class="entry-title">
+                        <input type="text" class="form-control" id="page-title" placeholder="Enter page title" type="text" ng-model="current_page.headline"> 
+                        <!-- <a href="{{url('/about')}}" class="btn">View Page</a> -->
+                      </div><!--entry title-->
+
+                      <div class="content-editor">
+<!--                           <div class="editor-controls">
+                             <a href="">Upload / Insert</a>
+                          </div>
+                          <div class="editor-toolbar">
+                            <div class="editor-body">
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <button role="presentation" type="button" tabindex="-1">
+                                  <i class="fa fa-bold"></i></button>
+                              </div> 
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <button role="presentation" type="button" tabindex="-1">
+                                  <i class="fa fa-italic"></i></button>
+                              </div> 
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <button role="presentation" type="button" tabindex="-1">
+                                  <i class="fa fa-underline"></i></button>
+                              </div> 
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <button role="presentation" type="button" tabindex="-1">
+                                  <i class="fa fa-align-left"></i></button>
+                              </div>
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <button role="presentation" type="button" tabindex="-1">
+                                  <i class="fa fa-align-center"></i></button>
+                              </div> 
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <button role="presentation" type="button" tabindex="-1">
+                                  <i class="fa fa-align-right"></i></button>
+                              </div>
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <select id="font-family">
+                                   <option>Font</option>
+                                   <option>Times New Roman</option>
+                                   <option>Helvetica</option>
+                                   <option>Open Sans</option>
+                                   <option>Sans serif</option>
+                                   <option>Arial</option>
+                                   <option>Nueue</option>
+                                </select>
+                              </div>
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <button role="presentation" type="button" tabindex="-1">
+                                  <span class="text-strike">ABC</span></button>
+                              </div>
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <button role="presentation" type="button" tabindex="-1">
+                                  <i class="fa fa-mail-forward"></i></button>
+                              </div>
+                              <div class="editor-btn" role="button" area-label="Bold">
+                                <button role="presentation" type="button" tabindex="-1">
+                                  <i class="fa fa-mail-reply"></i></button>
+                              </div>
+                            </div>
+                          </div><!--editor toolbar-->
+                          <textarea class="form-control" rows="15" ng-model="current_page.body"></textarea>
+                      </div><!--content editor-->
+                    </div><!--entry content-->
+                  </div><!--col 8-->
+                  <div class="col-md-3">
+                    <aside class="entry-right">
+                        <div id="postbox-container1" class="post-box"> 
+                          <div class="entry-content">
+                              <h3>Published Pages</h3>
+                              <div class="list_wrapper">
+                                  <div class="list" ng-repeat="page in page_list">
+                                      <div class="item">
+                                          <a class="link" ng-click="getPage(page.id)">{{ page.page_label }}</a>
+                                      </div>
+                                  </div>
+                              </div>
+                              <h3>Edit Pages</h3>
+                            <div class="list_wrapper">
+                                <div class="collapse in" id="page-collapse">
+                                  <div>
+                                    <a href=""  class="current" ng-click="savePage()">Save</a>
+                                  </div>
+                                  <div>
+                                    <a href="" ng-click="clearPage()">Clear</a>
+                                  </div>
+                                </div>
+                            </div>
+
+                          </div>
+
+                        </div>
+  
+                    </aside><!--entry right-->
+                  </div>
+                </form>
+            </div>
+        </div><!--admin content-->
+      </div>  <!--admin wrapper-->
+        <!-- <div>
+            <label>Headline</label>
+            <input e>
+        </div>
+        <div>
+            <label>Page Label</label>
+            <input type="text" ng-model="current_page.page_label">
+        </div>
+        <div>
+            <label>Body</label>
+            <textarea ng-model="current_page.body"></textarea>
+        </div>
+        <div>
+            <button ng-click="clearPage()">New</button>
+            <button ng-click="savePage()">Save</button>
+        </div>
+ -->

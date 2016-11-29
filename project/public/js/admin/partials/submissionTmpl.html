@@ -1,0 +1,52 @@
+
+<div class="content">
+    
+    <div class="wrapper">
+    <div class="admin-wrapper">
+        <div id="admin-content">
+            <div id="wrap">
+                <h1>Submissions Form Contact Page</h1> 
+                <form action="" method="post">
+                  <div class="col-md-9 pdl">
+                    <div class="entry-content">
+                      
+
+
+
+                      <div class="content-editor">
+                  <div class="list">
+                      <div class="submission-item" ng-repeat="sub in list">
+                          <h4>{{ sub.name }}</h4>
+                          <h6>{{ sub.email }}</h6>
+                          <h6>{{ sub.phone }}</h6>
+                          <strong>Commented: </strong>
+                          <br>
+                          {{ sub.comment }}
+                      </div>
+                      
+                  </div>
+                     </div><!--content editor-->
+
+
+                    </div><!--entry content-->
+                  </div><!--col 8-->
+                </form>
+            </div>
+        </div><!--admin content-->
+      </div>  <!--admin wrapper-->
+        <!-- <div>
+            <label>Headline</label>
+            <input e>
+        </div>
+        <div>
+            <label>Page Label</label>
+            <input type="text" ng-model="current_page.page_label">
+        </div>
+        <div>
+            <label>Body</label>
+            <textarea ng-model="current_page.body"></textarea>
+        </div>
+        <div>
+            <button ng-click="clearPage()">New</button>
+            <button ng-click="savePage()">Save</button>
+        </div>  -->

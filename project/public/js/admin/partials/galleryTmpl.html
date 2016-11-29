@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <title>Gallery</title>
+    </head>
+<body>
+    <div id="admin-content">
+        <div id="wrap">
+            <h1>Gallery Collection</h1>
+              <div class="col-md-8 pdl">
+                <div class="entry-content">
+                  <div class="entry-title">
+                  <h4 ng-hide="current_gallery.id">Select or Create a new Gallery</h4>
+                    <input type="text" class="form-control" placeholder="Enter gallery name" ng-model="current_gallery.name"> 
+                    <div style="clear: both;">
+                    <br>
+                        <button class="button1" ng-click="clearGallery()">Clear</button>
+                        <button class="button1" ng-click="saveGallery()">Save Gallery</button>
+                    </div>
+                  </div><!--entry title-->                    
+                </div>               
+              </div>
+
+                <div class="col-md-4">
+                    <aside class="entry-right">
+                        <div id="postbox-container1" class="post-box">
+                            <div class="entry-content">
+                                <h3>Published Galleries</h3>
+                                <div class="list_wrapper">
+                                    <div class="list">
+                                        <div class="item" ng-repeat="gallery in gallery_list">
+                                            <a class="link" ng-click="getGallery(gallery.id)">{{ gallery.name }}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                          
+                    </aside><!--entry right-->
+                </div> 
+                <h3>Images</h3>
+
+                <div class="row">
+                    <div class="col-xs-3 gallery-image-single" ng-repeat="image in current_image_list">
+                        <!-- <a ng-click="openLightboxModal($index)" class="thumbnail"> -->
+                        <!-- <img ng-src="{{image.thumbUrl}}" class="img-thumbnail" class="directive-image"> -->
+                        <img ng-src="/galleries/{{ image.filename}}" class="img-thumbnail" class="directive-image ">
+                        <div class = "image-title">
+                            {{ image.name }} 
+                            <br>
+                            ({{ image.filename }})
+                        </div>
+                                             
+                    </div>
+                </div>
+
+            <div style="width: 950px">
+                <h3> Add New</h3>           
+                <div class="images">                
+                    <p ng-show="current_gallery.id"> 
+                        <input type = "file" file-model = "myFile"/>
+                        <button class="button1" ng-click = "uploadImage()">Upload Image</button>
+                    </p>
+                </div>
+            </div>
+
+        </div> <!-- wrap -->    
+    </div><!--admin content-->
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+
+
+    </body>
+ </html>
